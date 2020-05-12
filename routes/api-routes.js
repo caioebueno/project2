@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 // Requiring our models and passport as we've configured it
 var db = require("../models");
 var passport = require("../config/passport");
@@ -51,73 +52,75 @@ module.exports = function(app) {
     }
   });
 
+  app.get("/api/services", function(req, res) {
+    db.services
+      .findAll()
+      .then(result => {
+        res.json(result);
+      })
+      .catch(err => {
+        throw err;
+      });
+  });
 
-	app.get("/api/services", function(req, res){
+  app.get("/api/services/:id", function(req, res) {
+    var id = req.params.id;
 
-		db.services.findAll()
-			.then(result => {
-				res.json(result);
-			})
-			.catch(err => {throw err;});
+    db.services
+      .findAll({ where: { id: id } })
+      .then(result => {
+        res.json(result);
+      })
+      .catch(err => {
+        throw err;
+      });
+  });
 
-	});
+  app.post("/api/create/services", function(req, res) {
+    db.services
+      .create(req.body)
+      .then(result => {
+        res.json(result);
+      })
+      .catch(err => {
+        throw err;
+      });
+  });
 
-	app.get("/api/services/:id", function(req, res){
+  app.get("/api/search/:keyword", function(req, res) {
+    var keyword = req.params.keyword;
 
-		var id = req.params.id;
+    db.services
+      .findAll({ where: { title: { [Op.like]: "%" + keyword + "%" } } })
+      .then(result => {
+        res.json(result);
+      })
+      .catch(err => {
+        throw err;
+      });
+  });
 
-		db.services.findAll({where: {id: id}})
-			.then(result => {
-				res.json(result);
-			})
-			.catch(err => {throw err;});
+  app.post("/api/create/reviews", function(req, res) {
+    db.reviews
+      .create(req.body)
+      .then(result => {
+        res.json(result);
+      })
+      .catch(err => {
+        throw err;
+      });
+  });
 
-	});
+  app.get("/api/reviews/:id", function(req, res) {
+    var id = req.params.id;
 
-	app.post("/api/create/services", function(req, res){
-
-		db.services.create(req.body)
-			.then(result => {
-				res.json(result);
-			})
-			.catch(err => {throw err;});
-
-	});
-
-	app.get("/api/search/:keyword", function(req, res){
-
-		var keyword = req.params.keyword;
-
-		db.services.findAll({where: {title: {[Op.like]: "%" + keyword + "%"}}})
-			.then(result => {
-
-				res.json(result);
-
-			})
-			.catch(err => {throw err;});
-    
-	});
-
-	app.post("/api/create/reviews", function(req, res){
-
-		db.reviews.create(req.body)
-			.then(result => {
-				res.json(result);
-			})
-			.catch(err => {throw err;});
-
-	});
-
-	app.get("/api/reviews/:id", function(req, res){
-
-		var id = req.params.id;
-
-		db.reviews.findAll({where: {id_service: id}})
-			.then(result => {
-				res.json(result);
-			})
-			.catch(err => {throw err;});
-
-    });
-    
+    db.reviews
+      .findAll({ where: { id_service: id } })
+      .then(result => {
+        res.json(result);
+      })
+      .catch(err => {
+        throw err;
+      });
+  });
 };
