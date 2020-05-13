@@ -1,0 +1,56 @@
+.background{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    float: left;
+    background: linear-gradient(#98ECFF, #FFFEEA);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img{
+  background: linear-gradient(rgb(124, 231, 255),rgb(247, 242, 151));
+  border-image: round;
+  margin-top: 100px;
+  border: 0px solid transparent;
+  border-radius: 10px 10px 10px 10px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container{
+  margin-top: 80px;
+}
+#signupForm{
+  font-family: 'Cabin', sans-serif;
+}
+
+.btn{
+  background-color: rgb(138, 206, 252);
+  border-color:transparent;
+  font-family: 'Cabin', sans-serif;
+}
+.btn:hover{
+  background-color: rgb(252, 243, 167);
+  border-color: transparent;
+  color: grey;
+}
+
+#footer{
+  background-color: rgb(34, 35, 44);
+  color: white;
+}
+
+.footer{
+  font-size: x-small;
+  margin-left: 30px;
+}
+
+@media only screen and (max-width: 640px) {
+  .background {
+        height: 130vh;
+        width: 100vw;     
+  }  
+  .container1{
+    margin-right: 150px;
+}
+}  

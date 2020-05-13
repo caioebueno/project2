@@ -8,9 +8,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="stylesheets/signup.css">
+    <link rel="stylesheet" href="vendoreSignup.css">
     <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
-
 
 </head>
 
@@ -20,48 +19,89 @@
         <div class="container1">
             <div class="row justify-content-center">
                 <div class="col-2">
-                    <img class="img" src="img/logo.png" alt="..." class="img-thumbnail">
+                    <img class="img" src="/Development/imgs/logo.png" alt="..." class="img-thumbnail">
                 </div>
             </div>
         </div>
 
 <!-- login form -->
-<form class="container signup col-md-8 col-lg-6">
-    <h1 id="signupForm"> Sign Up </h1>
+<form class="container col-md-8 col-lg-6">
+    <h1 id="loginForm"> Vendor Sign Up </h1>
           <hr>
-          <form class="signup">
+          <form>
             <div class="form-row">
               <div class="col-md-6 mb-3">
                 <label for="validationServer01">First name</label>
-                <input type="text" class="form-control is-valid" id="first-name" value="First Name" required>
+                <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
                 <div class="valid-feedback">
                   Looks good!
                 </div>
               </div>
               <div class="col-md-6 mb-3">
                 <label for="validationServer02">Last name</label>
-                <input type="text" class="form-control is-valid" id="last-name" value="Last Name" required>
+                <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
                 <div class="valid-feedback">
                   Looks good!
                 </div>
               </div>
               <div class="col-md-6 mb-3">
                 <label for="validationServer03">Email</label>
-                <input type="email" class="form-control is-invalid" id="email-input" required>
+                <input type="text" class="form-control is-invalid" id="validationServer03" required>
                 <div class="invalid-feedback">
                   Please provide a valid email
                 </div>
               </div>
               <div class="col-md-6 mb-3">
-                <label for="validationServer02">Set Password</label>
-                <input type="text" class="form-control is-valid" id="password-input" value="Otto" required>
+                <label for="validationServer01">Company Name</label>
+                <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
                 <div class="valid-feedback">
                   Looks good!
                 </div>
               </div>
               <div class="col-md-6 mb-3">
+                <label for="validationServer01">Phone Number</label>
+                <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-md-4 col-lg-4 mb-3">
+                  <label for="validationCustom03">City</label>
+                  <input type="text" class="form-control" id="validationCustom03" required>
+                  <div class="invalid-feedback">
+                    Please provide a valid city.
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="validationCustom04">State</label>
+                  <select class="custom-select" id="validationCustom04" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>...</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select a valid state.
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="validationCustom05">Zip</label>
+                  <input type="text" class="form-control" id="validationCustom05" required>
+                  <div class="invalid-feedback">
+                    Please provide a valid zip.
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="validationServer02">Set Password</label>
+                <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+              
+              <div class="col-md-6 mb-3">
                 <label for="validationServer02">Confirm Password</label>
-                <input type="text" class="form-control is-valid" id="confirm-password" value="Otto" required>
+                <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
                 <div class="valid-feedback">
                   Looks good!
                 </div>
@@ -78,7 +118,7 @@
               </div>
             </div>
             <div class="col-lg-6">
-                <button class="btn btn-primary" type="submit" id="submitBtn">Start the Party</button>
+                <button class="btn btn-primary" type="submit">Start the Party</button>
         </div>
             </div>
           </form>
@@ -96,9 +136,6 @@
       </footer>
 
     </div>
-<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-<script src="js/signup.js"></script>
-
 </body>
 
 </html>
