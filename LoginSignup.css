@@ -1,0 +1,71 @@
+.background{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    float: left;
+    background: url(Development/imgs/ballons.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img{
+  background: linear-gradient(#7ce7ff,#f7f297);
+  border-image: round;
+  margin-top: 100px;
+  border: 0px solid transparent;
+  border-radius: 10px 10px 10px 10px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+h1{
+    font-family: 'Cabin', sans-serif;
+    color: black;
+    margin-left: 27px;
+}
+
+.container{
+  margin-top: 150px;
+  align-content: center;
+}
+
+.btn{
+    padding: 10px 120px 10px 120px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-image: round;
+    background: rgb(241, 241, 241);
+    border: transparent;
+    color: black;
+    font-family: 'Cabin', sans-serif;
+}
+
+.btn:hover{
+    background:linear-gradient(#7ce7ff,#f7f297);
+    border-color: transparent;
+    color: grey;
+  }
+
+#footer{
+    background-color: #22232c;
+    color: white;
+  }
+  
+  .footer{
+    font-size: x-small;
+    margin-left: 30px;
+  }
+
+  @media only screen and (max-width: 640px) {
+    .container {
+          margin-left: auto;
+          margin-right: auto;
+          width: 100%;
+    }  
+    .btn{
+        width: 100%;
+        padding: 30px 120px 30px 120px;
+    }
+    .container1{
+        margin-right: 150px;
+    }
+    h1{
+        color: white;
+    }
+}  
