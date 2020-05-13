@@ -3,9 +3,11 @@ $(document).ready(function() {
   var signUpForm = $("form.signup");
   var emailInput = $("input#email-input");
   var passwordInput = $("input#password-input");
-  var confirmPassword = $("#confirm-password"); 
+  var confirmPassword = $("#confirm-password");
   var firstName = $("#first-name");
   var lastName = $("#last-name");
+
+  console.log(confirmPassword);
 
   // When the signup button is clicked, we validate the email and password are not blank
   signUpForm.on("submit", function(event) {
@@ -14,14 +16,19 @@ $(document).ready(function() {
       email: emailInput.val().trim(),
       password: passwordInput.val().trim(),
       firstname: firstName.val().trim(),
-      lastname:lastName.val().trim()
+      lastname: lastName.val().trim()
     };
 
     if (!userData.email || !userData.password) {
       return;
     }
     // If we have an email and password, run the signUpUser function
-    signUpUser(userData.email, userData.password, userData.firstname,userData.lastname);
+    signUpUser(
+      userData.email,
+      userData.password,
+      userData.firstname,
+      userData.lastname
+    );
     emailInput.val("");
     passwordInput.val("");
     firstName.val("");
@@ -35,7 +42,7 @@ $(document).ready(function() {
       email: email,
       password: password,
       firstname: firstName,
-      lastname:lastName
+      lastname: lastName
     })
       .then(function(data) {
         window.location.replace("/members");
