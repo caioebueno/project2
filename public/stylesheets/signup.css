@@ -1,6 +1,6 @@
 .background{
     position: absolute;
-    height: 100vh;
+    height: 180vh;
     width: 100vw;
     float: left;
     background: linear-gradient(#98ECFF, #FFFEEA);
@@ -47,7 +47,7 @@
 
 @media only screen and (max-width: 640px) {
   .background {
-        height: 130vh;
+        height: 50vh;
         width: 100vw;     
   }  
   .container1{
