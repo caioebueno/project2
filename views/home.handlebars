@@ -1,0 +1,24 @@
+  <div class="container2  carousel-inner justify-content-center align-items-center">
+      {{#each services}}
+      <div class="row row-equal carousel-item active">
+          <div class="col-md-4">
+              <div class="card" href="">
+                  <div class="card-img-top card-img-top-250">
+                      <img class="img-fluid" src="{{this.img}}" alt="Carousel 1">
+                  </div>
+                  <div class="card-block p-t-2">
+                      <h3 class=" text-wide p-b-2">{{this.title}}</h3>
+                      <h6 class="small">
+                          <a>{{this.desc}}</a>
+                          <hr>
+                          <div>
+                          <a>(350) Reviews</a>
+                        </div>
+                      </h6>
+                      <hr>
+                  </div>
+              </div>
+          </div>
+      </div>
+      {{/each}}
+  </div>

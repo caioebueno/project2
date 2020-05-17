@@ -1,6 +1,7 @@
 /* eslint-disable camelcase */
 // Requiring our models and passport as we've configured it
 var db = require("../models");
+const { Op } = require("sequelize");
 var passport = require("../config/passport");
 
 module.exports = function(app) {
@@ -94,7 +95,7 @@ module.exports = function(app) {
     var keyword = req.params.keyword;
 
     db.services
-      .findAll({ where: { title: { [Op.like]: "%" + keyword + "%" } } })
+      .findAll({ where: { location: { [Op.like]: "%" + keyword + "%" } } })
       .then(result => {
         res.json(result);
       })
