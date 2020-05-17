@@ -1,0 +1,271 @@
+/* Navbar */
+.navbar {
+    position: relative;
+    overflow: hidden;
+    background-color: white !important;
+  }
+  
+.navbar a {
+    float: left;
+    color: black !important;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+.navbar a:hover {
+    background-color: rgb(174, 244, 253);
+    color: black;
+  }
+  
+.nav-link {
+  float: right;
+}
+
+.header {
+    height: 450px;
+    background-image: url(public/img/confettiBanner.png);
+    opacity: 0.85;
+    width: 100%;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+  }
+
+  .form-control{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    border-radius:0px
+    
+}
+
+.btn2{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color:black;
+    color:white;
+    border: transparent;
+    border-radius:0px;
+    padding: 7px 7px 7px 7px;
+}
+.btn2:hover {
+    background-color: black;
+    border: transparent;
+    
+}
+
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    
+}
+
+
+    .heading-primary--main {
+      display: block;
+      font-size: 6rem;
+      font-weight: 400;
+      letter-spacing: 3.5rem;
+      animation-name: moveInLeft;
+      animation-duration: 1s;
+      animation-timing-function: ease-out;
+    }
+
+    /* equal card height */
+.row-equal > div[class*='col-'] {
+    display: flex;
+    flex: 1 0 auto;
+}
+
+.row-equal .card {
+   width: 100%;
+}
+
+/* ensure equal card height inside carousel */
+.carousel-inner>.row-equal.active, 
+.carousel-inner>.row-equal.next, 
+.carousel-inner>.row-equal.prev {
+    display: flex;
+}
+
+/* prevent flicker during transition */
+.carousel-inner>.row-equal.active.left, 
+.carousel-inner>.row-equal.active.right {
+    opacity: 0.5;
+    display: flex;
+}
+
+
+/* control image height */
+.card-img-top-250 {
+    max-height: 220px;
+    width: 450px;
+    overflow:hidden;
+}
+.card{
+    border: transparent;
+    
+}
+
+#title{
+    font-family: 'Cabin', sans-serif;
+}
+
+.hr1{
+    width: 85%;
+}
+
+@media only screen and (max-width: 640px) {
+    .hr1 {
+      width: 150%;
+    }
+  }
+
+  /* Footer  */
+
+/* Main Footer */
+footer .main-footer{	padding: 20px 0;	
+    background: rgb(0, 0, 0);
+    font-size: medium;
+    height: 500px;
+    font-family: 'Cabin', sans-serif;
+  }
+  footer ul{	padding-left: 0;	list-style: none;}
+  
+  /* Footer Top */
+  .footer-top{	
+    background: #000000;	
+    padding-bottom: 30px;	
+    margin-bottom: 30px;	
+    border-bottom: 3px solid #222;
+  }
+  
+  /* Footer transparent */
+  footer.transparent .footer-top, footer.transparent .main-footer{	
+    background: transparent;
+  }
+  footer.transparent .footer-copyright{	
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Footer 4 */
+  .footer- .logo {   
+     display: inline-block;
+    }
+  
+  /*==================== 
+      Widgets 
+  ====================== */
+  .widget{	
+    padding: 20px;	
+    margin-bottom: 40px;
+    font-family: 'Cabin', sans-serif;
+  }
+  .widget.widget-last{	
+    margin-bottom: 0px;
+  }
+  .widget.no-box{	
+    padding: 0;	
+    background-color: transparent;	
+    margin-bottom: 40px;
+    box-shadow: none; 
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
+  }
+  .widget.subscribe p{	
+    margin-bottom: 18px;
+  }
+  .widget li a{	
+    color :rgb(241, 253, 135);
+  }
+  .widget li a:hover{	
+    color: grey;
+  }
+  .widget-title {
+    margin-bottom: 20px;
+  }
+  .widget-title span {
+    background: #839FAD none repeat scroll 0 0;
+    display: block; 
+    height: 1px;
+    margin-top: 25px;
+    position: relative;
+    width: 20%;
+  }
+  .widget-title span::after {
+    background: inherit;
+    content: "";
+    height: inherit;    
+    position: absolute;
+    top: -4px;
+    width: 50%;
+  }
+  .widget-title.text-center span,.widget-title.text-center span::after {
+    margin-left: auto;
+    margin-right:auto;
+    left: 0;right: 0;
+  }
+  .widget .badge{	
+    float: right;	
+    background: #ffffff;
+  }
+  
+  .typo-light h1, 
+  .typo-light h2, 
+  .typo-light h3, 
+  .typo-light h4, 
+  .typo-light h5, 
+  .typo-light h6,
+  .typo-light p,
+  .typo-light div,
+  .typo-light span,
+  .typo-light small{	
+    color: #fff;
+  }
+  
+  ul.social-footer2 {	
+    margin: 0;
+    padding: 0;	
+    width: auto;
+  }
+  ul.social-footer2 li {
+    display: inline-block;
+    padding: 0;
+  }
+  ul.social-footer2 li a:hover {
+    background-color:rgb(207, 147, 56);
+  }
+  ul.social-footer2 li a {
+    display: block;	
+    height:30px;
+    width: 30px;
+    text-align: center;
+  }
+  .btn{
+    background:linear-gradient(#7ce7ff,#f7f297); 
+    color:#fff;
+  }
+  .btn:hover, .btn:focus, .btn.active {
+    background: grey;
+    color: #fff;
+  -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 250ms ease-in-out 0s;
+  -moz-transition: all 250ms ease-in-out 0s;
+  -ms-transition: all 250ms ease-in-out 0s;
+  -o-transition: all 250ms ease-in-out 0s;
+  transition: all 250ms ease-in-out 0s;
+  
+  }
+
+  .thumb-content{
+    font-family: 'Cabin', sans-serif;
+  }
+
