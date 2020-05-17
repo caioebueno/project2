@@ -3,7 +3,7 @@
     height: 100vh;
     width: 100vw;
     float: left;
-    background: url(Development/imgs/ballons.png);
+    background: url(../img/ballons.png);
     background-size: cover;
     background-repeat: no-repeat;
 }

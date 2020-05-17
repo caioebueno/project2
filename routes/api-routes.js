@@ -114,6 +114,19 @@ module.exports = function(app) {
       });
   });
 
+  app.get("/api/allreview", function(req, res){
+
+    db.reviews
+      .findAll({})
+      .then(result => {
+        res.json(result);
+      })
+      .catch(err => {
+        throw err;
+      });
+
+  })
+
   app.get("/api/reviews/:id", function(req, res) {
     var id = req.params.id;
 

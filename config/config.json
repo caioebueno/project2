@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Aflalo123",
+    "password": "caio0706",
     "database": "eventfull",
     "host": "localhost",
     "dialect": "mysql"
