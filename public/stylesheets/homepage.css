@@ -677,3 +677,27 @@ body {
     .book__form {
       width: 50%;
       padding: 6rem; }
+
+      .homeTitle{
+        font-size: 60px;
+        font-weight: bold;
+        line-height: 1.6;
+      }
+
+      .eventfullSpan{
+        font-size: 200px;
+      }
+      .navbar{
+        background-color: white;
+        padding: 10px;
+        color: black !important;
+      }
+      .homeFont{
+        color: black !important;
+      }
+      .signupFont{
+        color: black !important;
+      }
+a{
+  background-color: white;
+}

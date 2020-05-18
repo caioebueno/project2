@@ -46,8 +46,6 @@ module.exports = function(app, express) {
       });
   });
 
- 
-
   app.get("/loginsignup", function(req, res) {
     // If the user already has an account send them to the members page
 
@@ -62,6 +60,30 @@ module.exports = function(app, express) {
   app.get("/members", isAuthenticated, function(req, res) {
     res.sendFile(path.join(__dirname, "../public/homePageAfterLogin.html"));
   });
+
+  app.get("/chat/:msgId/:userTo", isAuthenticated, function(req, res){
+
+    var msgId = req.params.msgId;
+    var user  = req.user.id;
+    var userTo = req.params.userTo;
+    var handleObj = {
+        user: user,
+        userTo: userTo,
+        msgId: msgId,
+        msgIdClaen: msgId + "clean"
+    }
+    console.log(handleObj)
+    res.render('chat.handlebars', handleObj);
+
+})
+
+app.get("/user", isAuthenticated, function(req, res){
+  res.json({user: req.user.id})
+})
+
+  app.get("/all/messeges", isAuthenticated, function(req, res){
+    res.sendFile(path.join(__dirname, "../public/allMesseges.html"));
+  })
 };
 
 

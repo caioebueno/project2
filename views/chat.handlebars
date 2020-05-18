@@ -1,0 +1,42 @@
+<script>
+
+
+        $(function () {
+
+            var socket = io();
+
+            var user = {{user}};
+            var userTo = {{userTo}};
+
+            socket.emit('connected', user, userTo);
+
+
+            $('form').submit(function(e){
+
+                e.preventDefault(); // prevents page reloading
+                socket.emit('message', $('#m').val(), user, userTo);
+                $('#m').val('');
+                console.log("submioted messege")
+
+                return false;
+
+            });
+
+            socket.on(`{{msgIdClaen}}`, function(data){
+              console.log(data);
+              document.getElementById("messages").innerHTML = "";
+            })
+
+            socket.on(`{{msgId}}`, function(msg, msgId, user){
+
+                let li = document.createElement("li");
+                li.innerHTML = "Messege: " + msg + " From: " + user;
+                document.getElementById("messages").append(li);
+                console.log("Messege: " + msg + " From: " + user);
+                
+            });
+
+        });
+
+        
+    </script>
