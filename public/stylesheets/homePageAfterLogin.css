@@ -25,7 +25,7 @@
 
 .header {
     height: 450px;
-    background-image: url(public/img/confettiBanner.png);
+    background-image: url(https://lh3.googleusercontent.com/d/1OE0-NciffUZmBac2XW3NuRtThvliqccu);
     opacity: 0.85;
     width: 100%;
     background-size: cover;
@@ -132,10 +132,10 @@
   /* Footer  */
 
 /* Main Footer */
-footer .main-footer{	padding: 20px 0;	
+footer .main-footer{	padding: 50px;	
     background: rgb(0, 0, 0);
     font-size: medium;
-    height: 500px;
+    
     font-family: 'Cabin', sans-serif;
   }
   footer ul{	padding-left: 0;	list-style: none;}
@@ -186,7 +186,7 @@ footer .main-footer{	padding: 20px 0;
     margin-bottom: 18px;
   }
   .widget li a{	
-    color :rgb(241, 253, 135);
+    color :rgb(255, 255, 255);
   }
   .widget li a:hover{	
     color: grey;
@@ -243,7 +243,7 @@ footer .main-footer{	padding: 20px 0;
     padding: 0;
   }
   ul.social-footer2 li a:hover {
-    background-color:rgb(207, 147, 56);
+    background:linear-gradient(#7ce7ff,#f7f297);
   }
   ul.social-footer2 li a {
     display: block;	
@@ -273,5 +273,11 @@ footer .main-footer{	padding: 20px 0;
 
   .thumb-content{
     font-family: 'Cabin', sans-serif;
+    padding-top: 5px;
+  }
+
+  .serviceContainer{
+    padding-bottom: 100px;
+    padding-top: 100px;
   }
 

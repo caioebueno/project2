@@ -1,5 +1,5 @@
 <script>
-    
+
 
         $(function () {
 
@@ -32,12 +32,49 @@
 
             socket.on(`{{msgId}}`, function(msg, msgId, user){
 
-                var userId = userId();
-                console.log(userId);
-                let li = document.createElement("li");
-                li.innerHTML = "Messege: " + msg + " From: " + user;
-                document.getElementById("ourMessage").append(li);
-                console.log("Messege: " + msg + " From: " + user);
+                
+                $   .ajax({
+                    url: "/user",
+                    method: "GET"
+                })
+                .then(result => {
+                    let userId = result.user;
+                    
+                    if(user != userId){
+                      
+                        let div = document.createElement("div");
+                        div.setAttribute("class", "received-chats")
+                        var html = `<div class="received-chats-img">
+                                   
+                                </div>
+                                <div class="received-msg">
+                                    <div class="received-msg-inbox">
+                                        <p>` + msg + `</p>
+                                        
+                                    </div>
+                                </div>`
+                            div.innerHTML = html;
+                            document.getElementById("ourMessage").append(div);
+
+                    }
+                    if(user == userId){
+                         let div = document.createElement("div");
+                        div.setAttribute("class", "outgoing-chats")
+                        var html = `<div class="outgoing-chats-msg">
+                                        <p>` + msg + `</p>
+                                        
+                                </div>
+                                <div class="outgoing-chats-img">
+                                    
+                                </div>`
+                            div.innerHTML = html;
+                            document.getElementById("ourMessage").append(div);
+                    }
+
+                  
+
+                })
+                
                 
             });
 

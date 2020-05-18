@@ -46,7 +46,7 @@ body {
 
 .header {
     height: 450px;
-    background-image: url(public/img/5entertainment.png);
+    background-image: url('https://lh3.googleusercontent.com/d/1PSFJMFVD7j1h96k4kVQ3FbQxZ9r1LR29');
     width: 100%;
     background-size: cover;
     background-position: top;
@@ -526,4 +526,9 @@ body {
               width: 100%;
         }
     }   */
+
+    #demo-1{
+      width: 200px;
+      height: 50px;;
+    }
     

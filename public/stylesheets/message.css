@@ -18,7 +18,7 @@ img{
     height: 10vh;
     border-bottom: none;
     display: inline-block;
-    background-color: #35caaa;
+    background-color: #7ce7ff;
 }
 
 .msg-header-img{
@@ -86,7 +86,11 @@ img{
     display: inline-block;
     width: 20px;
 }
-
+.received-chats{
+    overflow: hidden;
+    margin: 26px 20px;
+}
+}
 .received-msg{
     display: inline-block;
     padding: 0 0 0 10px;
@@ -121,7 +125,7 @@ img{
 }
 
 .outgoing-chats-msg p{
-    background: #35caaa none repeat scroll 0 0;
+    background: #7ce7ff none repeat scroll 0 0;
     color: #fff;
     border-radius: 10px;
     font-size: 14px;
@@ -147,7 +151,7 @@ img{
 .msg-bottom{
     position: relative;
     height: 10vh;
-    background-color: #35caaa;
+    background-color: #7ce7ff;
 }
 
 .input-group{
@@ -171,7 +175,7 @@ img{
 }
 
 .input-group .fa{
-    color: #35caaa;
+    color: #7ce7ff;
     float:right;
 }
 
