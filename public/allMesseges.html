@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <ul>
+        <li class="chat"   data-to="1">Chat 1</li>
+        <li class="chat"   data-to="3">Chat 2</li>
+        <li class="chat"  data-to="5">Chat 2</li>
+    </ul>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+
+     
+$.ajax({
+    url: "/user",
+    method: "GET"
+  })
+  .then(result => {
+      console.log(result);
+      let userId = result.user;
+      let lis = document.getElementsByClassName("chat")
+      for(let i = 0; i < lis.length; i++){
+        let to = lis[i].getAttribute("data-to");
+        console.log(to);
+        let userArray = [userId, to];
+        let sortedArray = userArray.sort();
+        let msgId = sortedArray[0] + "-" + sortedArray[1];
+        lis[i].setAttribute("data-id", msgId);
+        console.log(msgId)
+        console.log(lis[i]);
+
+    }
+  })
+
+        $(".chat").on("click", function(){
+            
+            var msgId = this.getAttribute("data-id");
+            var userTo = this.getAttribute("data-to");
+            console.log(msgId);
+
+            
+                history.pushState({}, '');
+                window.location.replace("/chat/" + msgId + "/" + userTo); 
+               
+          
+        })
+
+    </script>
+</body>
+</html>
