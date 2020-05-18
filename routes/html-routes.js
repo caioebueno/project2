@@ -6,7 +6,8 @@ var db = require("../models");
 // Requiring our custom middleware for checking if a user is logged in
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 
-module.exports = function(app) {
+module.exports = function(app, express) {
+  app.use(express.static(__dirname + '/public'));
   app.engine("handlebars", exphbs({ defaultLayout: "main" }));
   app.set("view engine", "handlebars");
   app.set("views", path.join(__dirname, "../views"));
@@ -31,6 +32,21 @@ module.exports = function(app) {
     }
     res.sendFile(path.join(__dirname, "../public/login.html"));
   });
+
+  app.get("/api/services/:id", function(req, res) {
+    var id = req.params.id;
+
+    db.services
+      .findAll({ where: { id: id } })
+      .then(result => {
+        res.sendFile(path.join(__dirname, "../public/vendorListing.html"));
+      })
+      .catch(err => {
+        throw err;
+      });
+  });
+
+ 
 
   app.get("/loginsignup", function(req, res) {
     // If the user already has an account send them to the members page

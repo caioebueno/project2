@@ -67,18 +67,7 @@ module.exports = function(app) {
       });
   });
 
-  app.get("/api/services/:id", function(req, res) {
-    var id = req.params.id;
 
-    db.services
-      .findAll({ where: { id: id } })
-      .then(result => {
-        res.json(result);
-      })
-      .catch(err => {
-        throw err;
-      });
-  });
 
   app.post("/api/create/services", function(req, res) {
     db.services
@@ -115,8 +104,7 @@ module.exports = function(app) {
       });
   });
 
-  app.get("/api/allreview", function(req, res){
-
+  app.get("/api/allreview", function(req, res) {
     db.reviews
       .findAll({})
       .then(result => {
@@ -125,8 +113,7 @@ module.exports = function(app) {
       .catch(err => {
         throw err;
       });
-
-  })
+  });
 
   app.get("/api/reviews/:id", function(req, res) {
     var id = req.params.id;

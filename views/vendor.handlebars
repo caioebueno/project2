@@ -1,27 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/lightpick@latest/css/lightpick.css">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="vendorListing.css" />
-    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
-    <title>Eventful | Exciting news for event planners</title>
-  </head>
-  
-
-  <body>
-    <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -263,53 +240,3 @@
       
       
     </main>
-    <script>
-        function myFunction() {
-          var dots = document.getElementById("dots");
-          var moreText = document.getElementById("more");
-          var btnText = document.getElementById("myBtn");
-        
-          if (dots.style.display === "none") {
-            dots.style.display = "inline";
-            btnText.innerHTML = "Read more"; 
-            moreText.style.display = "none";
-          } else {
-            dots.style.display = "none";
-            btnText.innerHTML = "Read less"; 
-            moreText.style.display = "inline";
-          }
-        }
-        function currentDiv(n) {
-  showDivs(slideIndex = n);
-}
-mobiscroll.settings = {
-    theme: 'ios',
-    themeVariant: 'light'
-};
-
-        </script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-        <script type="text/javascript" src="https://unpkg.com/lightpick@latest/lightpick.js"></script>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript">
-          var selectedDate = "";
-          // demo-1
-          new Lightpick({
-            field: document.getElementById("demo-1"),
-            onSelect: function (date) {
-              document.getElementById("result-1").innerHTML = date.format(
-                "Do MMMM YYYY"
-              );
-              selectedDate = date.format("YYYYMMDD");
-            },
-          });
-          $("#sendDate").click(function () {
-            var date = $("#demo-1").val();
-            console.log(selectedDate);
-          });
-        </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="js/vendorListing.js"></script>
-  </body>
-</html>
