@@ -7,9 +7,12 @@ $.ajax({
     container.innerHTML = "";
     result.forEach(obj => {
       console.log(obj);
-      var createDiv = document.createElement("div");
+      var createDiv = document.createElement("a");
       createDiv.setAttribute("class", "card");
       createDiv.setAttribute("style", "width: 18rem;");
+      createDiv.setAttribute("onclick", "vendorRedirect(this)");
+      createDiv.setAttribute("data-id", obj.id);
+
       var html =
         `<div class="serviceItem col-md-12">
               <div class="card" href="">
@@ -57,7 +60,7 @@ function searchService() {
       createDiv.setAttribute("class", "card");
       createDiv.setAttribute("style", "width: 18rem;");
       var html =
-        `<div class="serviceItem col-md-12">
+        `<a onclick="redirectVendor(this)data-id="` + obj.vendor_id + `""><div class="serviceItem col-md-12">
               <div class="card" href="">
                   <div class="card-img-top card-img-top-250">
                       <img class="img-fluid" src="` +
@@ -80,9 +83,18 @@ function searchService() {
                       <hr>
                   </div>
               </div>
-          </div>`;
+          </div><a>`;
       createDiv.innerHTML = html;
       container.append(createDiv);
     });
   });
+}
+
+function vendorRedirect(elem){
+
+ var id = elem.getAttribute("data-id")
+ console.log(id)
+  
+  location.replace("/api/services/" + id);
+
 }
