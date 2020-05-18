@@ -1,5 +1,5 @@
 <script>
-
+    
 
         $(function () {
 
@@ -10,6 +10,9 @@
 
             socket.emit('connected', user, userTo);
 
+
+        
+        
 
             $('form').submit(function(e){
 
@@ -24,14 +27,16 @@
 
             socket.on(`{{msgIdClaen}}`, function(data){
               console.log(data);
-              document.getElementById("messages").innerHTML = "";
+              document.getElementById("ourMessage").innerHTML = "";
             })
 
             socket.on(`{{msgId}}`, function(msg, msgId, user){
 
+                var userId = userId();
+                console.log(userId);
                 let li = document.createElement("li");
                 li.innerHTML = "Messege: " + msg + " From: " + user;
-                document.getElementById("messages").append(li);
+                document.getElementById("ourMessage").append(li);
                 console.log("Messege: " + msg + " From: " + user);
                 
             });
